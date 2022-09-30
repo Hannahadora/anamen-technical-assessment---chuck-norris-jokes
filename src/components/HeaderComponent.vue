@@ -70,7 +70,7 @@ const closeSidebar = () => {
 };
 </script>
 
-<style>
+<style scoped>
 header { background: #303033;}
 .nav-wrapper { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
 .nav-links {display: flex;  }

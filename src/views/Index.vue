@@ -38,8 +38,8 @@
         </div>
 
         <div class="jokes-card-layout-wrapper">
-          <JokeCard
-            v-for="joke in filteredJokes.slice(0, pageTake)"
+          <JokeCard @click="$router.push(`/joke/${idx}/${joke.id}`)"
+            v-for="(joke, idx) in filteredJokes.slice(0, pageTake)"
             :key="joke.id"
             :joke="joke"
           />
@@ -57,7 +57,9 @@
 import CategorySearch from "../components/CategorySearch.vue";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue-demi";
 import { useJokesStore } from "../stores/jokes";
+
 import infiniteScroll from "vue-infinite-scroll";
+
 import DefaultAppLayout from "../layout/DefaultAppLayout.vue";
 import ButtonComponent from "../components/ButtonComponent.vue";
 import ArrowDown from "../assets/images/arrow-down-thin.svg";
@@ -120,11 +122,14 @@ const toggleAvailableCategories = (value) => {
 };
 
 const loadMore = () => {
-  busy.value = true;
-  setTimeout(() => {
-    return filteredJokes.value.slice(0, pageTake.value++);
-    busy.value = false;
-  }, 7000);
+  let count = pageTake++;
+  // if (count >= filteredJokes.value.length) {
+    busy.value = true;
+    setTimeout(() => {
+      return filteredJokes.value.slice(0, pageTake.value++);
+      busy.value = false;
+    }, 7000);
+  // }
 };
 
 onMounted(async () => {

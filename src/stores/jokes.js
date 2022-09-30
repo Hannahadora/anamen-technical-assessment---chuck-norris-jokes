@@ -8,7 +8,10 @@ import { jokesAPI } from '../api';
 export const useJokesStore = defineStore("jokes", {
   state: () => {
     return {
-      jokes: {},
+      jokes: {
+        result: [],
+        total: ''
+      },
       terms: {
         searchQuery: '',
         selectedCategory: "all"
