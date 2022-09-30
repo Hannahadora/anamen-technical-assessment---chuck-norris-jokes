@@ -122,11 +122,11 @@ const toggleAvailableCategories = (value) => {
 };
 
 const loadMore = () => {
-  let count = pageTake++;
+  // let count = pageTake++;
   // if (count >= filteredJokes.value.length) {
     busy.value = true;
     setTimeout(() => {
-      return filteredJokes.value.slice(0, pageTake.value++);
+    filteredJokes.value.slice(0, pageTake.value++);
       busy.value = false;
     }, 7000);
   // }
