@@ -54,7 +54,6 @@
 </template>
 
 <script setup>
-import CategorySearch from "../components/CategorySearch.vue";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue-demi";
 import { useJokesStore } from "../stores/jokes";
 
@@ -65,7 +64,6 @@ import ButtonComponent from "../components/ButtonComponent.vue";
 import ArrowDown from "../assets/images/arrow-down-thin.svg";
 import ArrowUp from "../assets/images/arrow-up-thin.svg";
 import JokeCard from "../components/JokeCard.vue";
-import Loader from "../components/Loader.vue";
 
 const jokesStore = useJokesStore();
 
@@ -152,7 +150,6 @@ onUnmounted(() => {
   color: red;
   font-weight: medium;
   text-align: center;
-  /* margin: 40px 0; */
   font-style: italic;
 }
 /* MEDIA QUERIES */
