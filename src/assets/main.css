@@ -10,25 +10,25 @@ body { font-family: 'Montserrat', sans-serif; font-weight: normal;}
 .btn-layout-wrapper { max-width: 1000px; margin: 50px auto 50px auto; }
 .button-wrapper { display: grid; grid-template-columns: repeat(5, 1fr);}
 .btn-sub-wrapper:nth-of-type(7n + 1) button {
-  background: #ff5b5b !important;
+  background: #ff5b5b !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 2) button {
-  background: #ff915b !important;
+  background: #ff915b !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 3) button {
-  background: #ffbe5b !important;
+  background: #ffbe5b !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 4) button {
-  background: #ffdf5b !important;
+  background: #ffdf5b !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 5) button {
-  background: #8fe360 !important;
+  background: #8fe360 !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 6) button {
-  background: #57e690 !important;
+  background: #57e690 !important; border: none;
 }
 .btn-sub-wrapper:nth-of-type(7n + 7) button {
-  background: #57dbe6 !important;
+  background: #57dbe6 !important; border: none;
 }
 
 @media (max-width: 1024px) {
