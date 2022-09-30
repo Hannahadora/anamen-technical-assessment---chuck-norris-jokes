@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "./base.css";
+*{ padding: 0; margin: 0; box-sizing: border-box;}
+
+body { font-family: 'Montserrat', sans-serif; font-weight: normal;}
+
+
+/* Button Grid */
+.btn-layout-wrapper { max-width: 1000px; margin: 50px auto 50px auto; }
+.button-wrapper { display: grid; grid-template-columns: repeat(5, 1fr);}
+.btn-sub-wrapper:nth-of-type(7n + 1) button {
+  background: #ff5b5b !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 2) button {
+  background: #ff915b !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 3) button {
+  background: #ffbe5b !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 4) button {
+  background: #ffdf5b !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 5) button {
+  background: #8fe360 !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 6) button {
+  background: #57e690 !important;
+}
+.btn-sub-wrapper:nth-of-type(7n + 7) button {
+  background: #57dbe6 !important;
+}
+
+@media (max-width: 1024px) {
+    .button-wrapper { display: flex; overflow-x:scroll ;}
+    .btn-layout-wrapper { max-width: 1000px; margin: 50px auto 30px auto; }
+}
+
+
+
+
+/* JOkes Card */
+.jokes-card-layout-wrapper { max-width: 1000px; margin: 0 auto 100px auto; display: grid; grid-template-columns: repeat(3, 1fr);}
+.active-category-wrapper { max-width: 1000px; margin: 0 auto 20px auto; }
+.m-line { border-top: 1px solid #b2b2b2 !important; max-width: 970px; }
+.active-category {all:unset; background: #57e690; color:#fff; font-weight: bold !important; border-radius: 30px; padding:6px 20px; }
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .jokes-card-layout-wrapper > div {  margin-right: 20px; }
+}
+@media (max-width: 767px) {
+    .jokes-card-layout-wrapper { grid-template-columns: repeat(2, 1fr);  margin-right: 15px; }
+    .active-category { font-size: 14px; padding: 6px 14px;}
+}
+@media (max-width: 480px) {
+    .jokes-card-layout-wrapper { display: block;  margin-right: 0px; }
+    .jokes-card-layout-wrapper > div {  margin-right: 0px; }
+    
+}
+
+
+/* loader */
+.progress-1 { position: fixed; top: 0; left: 0; right: 0; height: 4px; display: block; width: 100%; margin: 0; overflow: hidden; background: #f4f4f4; z-index: 2000;}
+.progress-1 .determinate { position: absolute; top: 0; left: 0;bottom: 0; background-color: #26a69a; -webkit-transition: width 0.3s linear; transition: width 0.3s linear;}
+.progress-1 .indeterminate { background-color: #676768;}
+.progress-1 .indeterminate:before { content: ""; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)   infinite; animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;}
+.progress-1 .indeterminate:after { content: ""; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)   infinite; animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)   infinite; -webkit-animation-delay: 1.15s; animation-delay: 1.15s;}
+@-webkit-keyframes indeterminate { 0% { left: -35%; right: 100%  } 60% { left: 100%;  right: -90%; } 100% { left: 100%; right: -90%;  }}
+@keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%;  } 100% { left: 100%; right: -90% }}
+@-webkit-keyframes indeterminate-short { 0% { left: -200%; right: 100%;  } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; }}
+@keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8% } 100% { left: 107%; right: -8%; }}
