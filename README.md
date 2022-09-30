@@ -33,8 +33,8 @@ Create an application which fetches and stores the jokes from https://api.chuckn
 
 #### Get all jokes
 
-``
- `[https://api.chucknorris.io/jokes/search?query=all/](https://api.chucknorris.io/jokes/search?query=all/)
+```
+ GET: https://api.chucknorris.io/jokes/search?query=all/
 ```
 
 | Parameter | Type     | Description                |
